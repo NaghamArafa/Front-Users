@@ -17,7 +17,7 @@ export default function Page() {
     <ScrollView  style={styles.scrollViewStyle} >
         <View style={styles.container}>
 
-        <Text style={styles.headingTxt}>Welcom in the Airport</Text>
+        <Text style={styles.headingTxt}>Welcome in the Airport</Text>
 
         <View>
         <Image source={myImage} style={styles.image} />
@@ -25,7 +25,7 @@ export default function Page() {
         <Text style={styles.headingTxt}>Explore The Beautiful World!</Text>
 
         <Pressable
-          onPress={()=>router.replace("Drawer/(tabs)/(Countries)/Hotels")}
+          onPress={()=>router.push("/Drawer/Country")}
           style={[styles.footerBtn, styles.footerBookBtn]}
         >
           <Text style={styles.footerBtnTxt}>CHOOSE COUNTRY !</Text>

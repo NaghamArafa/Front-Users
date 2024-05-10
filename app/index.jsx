@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { SafeAreaView, View, Text, StyleSheet, Image, FlatList, TouchableOpacity, Pressable } from 'react-native';
-import Item from "./../Componants/item"; // Adjust the path accordingly
+import Item from "../Componants/item"; // Adjust the path accordingly
 import { useRouter } from "expo-router";
 import { Link } from "expo-router";
-import Country from "./Country";
-import Home from "../app/Drawer/Home"
+import Home from "./Drawer/Home"
 
 export default function Page() {
     //var
@@ -18,6 +17,9 @@ export default function Page() {
 
     return(
         <View style={styles.container}>
+             <Pressable onPress={()=>router.replace("./Drawer/Home")}>
+        <Text style={{ marginTop: 10 }}>HOME</Text>
+        </Pressable>
             
             <Link href='/Login' asChild>
                 <Text>Login</Text>
@@ -27,9 +29,9 @@ export default function Page() {
             </Link>
            
            
-            <Link href='/Country' asChild>
-                <Text>Countries</Text>
-            </Link>
+            <Pressable onPress={()=>router.replace("./Drawer/Country")}>
+        <Text style={{ marginTop: 10 }}>Countries</Text>
+        </Pressable>
 
             
         </View>

@@ -6,8 +6,7 @@ import { useRouter  } from "expo-router";
 
 
 
-
-export function page() {
+export default function page() {
     const {id} = useLocalSearchParams();
     const route = useRouter();
     

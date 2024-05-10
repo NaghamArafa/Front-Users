@@ -27,6 +27,12 @@ export default function _layout() {
                 name='(tabs)'
                 options={{headerShown : false}}
             />
+               <Stack.Screen 
+            name='Drawer'
+            options={{
+                headerShown:false,
+            }}
+        />
             <Stack.Screen name='SignUp' options={{
                 title : 'Register',
                 headerRight: () =>{

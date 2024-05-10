@@ -2,18 +2,18 @@
 
 import React , {useEffect , useState} from "react";
 import{ View ,TextInput ,Text , StyleSheet, FlatList , ScrollView} from 'react-native';
-import Countries from "../Componants/Countries";
+import Countries from "../../Componants/Countries";
 import {  useRouter } from "expo-router";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Search from "@/Componants/Search";
 
 export default function Country(){
     //the images
-    const palstine = require('../assets/images/Paliestine.jpg');
-    const a = require('../assets/images/2.jpg');
-    const b = require('../assets/images/7.jpg');
-    const c = require('../assets/images/4.jpg');
-    const d = require('../assets/images/5.jpg');
+    const palstine = require('../../assets/images/Paliestine.jpg');
+    const a = require('../../assets/images/2.jpg');
+    const b = require('../../assets/images/7.jpg');
+    const c = require('../../assets/images/4.jpg');
+    const d = require('../../assets/images/5.jpg');
 
     //Search var
     const [query , setQuery] = useState('');
@@ -35,7 +35,7 @@ export default function Country(){
         { id: '5', name: 'Turky', img: d  , Price : '10000$'},
         { id: '6', name: 'Paliestina', img: palstine  , Price : '10000$'},
         { id: '7', name: 'Egypt', img: a  , Price : '10000$'},
-        { id: '8', name: 'New Yourk', img: b  , Price : '10000$'},
+        { id: '8', name: 'NewYourk', img: b  , Price : '10000$'},
         { id: '9', name: 'Italy', img: c  , Price : '10000$'},
         { id: '10', name: 'Turky', img: d  , Price : '10000$'},
         { id: '11', name: 'Paliestina', img: palstine  , Price : '10000$'},
@@ -133,16 +133,30 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#fff',
         flexDirection: 'column',
     },
     button: {
-        borderRadius: 5,
-        width: '30%',
-        height: '30%',
-    },
+        width: '30%', 
+        height:300,
+        marginLeft: 30,
+        marginTop: 20,
+        justifyContent: "flex-end",
+        alignItems:"center",
+        backgroundColor: '#fff',
+        paddingVertical: 30,
+        paddingHorizontal: 20,
+        borderRadius: 20,
+        shadowColor: '#fff', // Optional shadow for iOS
+        shadowOffset: { height: 1, width: 1 }, // Optional shadow for iOS
+        shadowOpacity: 1, // Optional shadow for iOS
+        shadowRadius: 1, // Optional shadow for iOS
+        elevation: 2 // Optional elevation for Android
+      },
     text: {
-        fontSize: 20,
-        fontStyle: 'italic',
+        color: 'black',
+        fontSize: 18,
+        textAlign: 'center'
     },
     header: {
         fontSize: 24,
